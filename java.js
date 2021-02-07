@@ -23,9 +23,9 @@ function clickResponse() {
             <h2 class="text-center">${meal.strMeal}</h2>
             `;
             imageDiv.appendChild(imageDetails);
+            document.getElementById("input-text").value = "";
           })
           .catch((error) => console.log(error));
-        document.getElementById("input-text").value = "";
       });
   }
 }
