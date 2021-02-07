@@ -1,0 +1,28 @@
+#image {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 50px;
+}
+
+.image-size {
+  width: 100%;
+  height: 200px;
+  border-radius: 10%;
+}
+
+.image-div-details {
+  width: 100%;
+  border-radius: 10%;
+  background-color: rgb(206, 200, 200);
+}
+
+.containerr {
+  box-sizing: border-box;
+  width: 80%;
+  margin: 30px auto;
+}
+#food-details {
+  width: 50%;
+  margin: 10px auto;
+  border-radius: 10px;
+}
