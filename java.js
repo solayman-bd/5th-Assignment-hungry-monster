@@ -4,6 +4,8 @@ const clickResponse = () => {
     alert("Input must be a single Character");
     document.getElementById("input-text").value = "";
   } else {
+    const foodImage = document.getElementById("food-image");
+    foodImage.innerHTML = "";
     const showingIngredients = document.getElementById("showing-ingredients");
     showingIngredients.innerHTML = "";
 
@@ -25,7 +27,7 @@ const foodFinder = (data) => {
     const mealId = meal.idMeal;
     imageDetails.setAttribute("onclick", `mealDetails(${mealId})`);
     imageDetails.innerHTML = `
-            <img class="image-size" src=${meal.strMealThumb}>
+            <img class="image-size p-1" src=${meal.strMealThumb}>
             <h2 class="text-center">${meal.strMeal}</h2>
             `;
     imageDiv.appendChild(imageDetails);
@@ -42,6 +44,7 @@ const ingredientHandler = (data) => {
   const foodImage = document.getElementById("food-image");
   const showingIngredients = document.getElementById("showing-ingredients");
   showingIngredients.innerHTML = "";
+  foodImage.innerHTML = "";
   const requiredObject = data.meals[0];
   const heading = document.createElement("h1");
   heading.className = "text-center";
