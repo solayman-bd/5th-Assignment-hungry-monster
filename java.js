@@ -38,7 +38,8 @@ const foodFinder = (data) => {
 const mealDetails = (mealIdValue) => {
   fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealIdValue}`)
     .then((res) => res.json())
-    .then((data) => ingredientHandler(data));
+    .then((data) => ingredientHandler(data))
+    .catch((error) => errorMessage(error));
 };
 const ingredientHandler = (data) => {
   const foodImage = document.getElementById("food-image");
