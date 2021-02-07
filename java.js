@@ -1,6 +1,6 @@
 const clickResponse = () => {
   const inputText = document.getElementById("input-text").value;
-  if (inputText.length > 1) {
+  if (inputText.length > 1 || inputText == "") {
     alert("Input must be a single Character");
     document.getElementById("input-text").value = "";
   } else {
