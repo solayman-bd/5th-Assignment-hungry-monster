@@ -26,6 +26,7 @@ const foodFinder = (data) => {
     imageDetails.className = "image-div-details";
     const mealId = meal.idMeal;
     imageDetails.setAttribute("onclick", `mealDetails(${mealId})`);
+    imageDetails.setAttribute("title", `Click to show ingredients on Top`);
     imageDetails.innerHTML = `
             <img class="image-size p-1" src=${meal.strMealThumb}>
             <h4 class="text-center pt-2">${meal.strMeal}</h4>
@@ -50,7 +51,7 @@ const ingredientHandler = (data) => {
   const heading = document.createElement("h1");
   heading.className = "text-center";
   foodImage.innerHTML = `<img class="img-fluid img-thumbnail mt-3" src="${requiredObject.strMealThumb}"> `;
-  heading.innerText = `Ingredients of ${requiredObject.strMeal}`;
+  heading.innerHTML = `<h3>Ingredients of ${requiredObject.strMeal}</h3>`;
   showingIngredients.appendChild(heading);
   const objectKeys = Object.keys(requiredObject);
   const objectKeysLength = objectKeys.length;
@@ -70,7 +71,7 @@ const ingredientHandler = (data) => {
 const errorMessage = (error) => {
   const errorMessageGiver = document.getElementById("error-message-giver");
   const errorMessageContext = document.createElement("H2");
-  errorMessageContext.innerText = `Something went wrong. Please try again`;
+  errorMessageContext.innerHTML = `<h3 class="text-center text-danger w-50 mx-auto">Something went wrong. Please try again later!!</h3>`;
   errorMessageGiver.appendChild(errorMessageContext);
 };
 const errorMessageClear = () => {
