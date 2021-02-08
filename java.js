@@ -28,7 +28,7 @@ const foodFinder = (data) => {
     imageDetails.setAttribute("onclick", `mealDetails(${mealId})`);
     imageDetails.innerHTML = `
             <img class="image-size p-1" src=${meal.strMealThumb}>
-            <h2 class="text-center">${meal.strMeal}</h2>
+            <h4 class="text-center pt-2">${meal.strMeal}</h4>
             `;
     imageDiv.appendChild(imageDetails);
     document.getElementById("input-text").value = "";

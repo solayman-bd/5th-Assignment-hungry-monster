@@ -26,3 +26,7 @@
   margin: 10px auto;
   border-radius: 10px;
 }
+nav ul li h5:hover {
+  color: hotpink;
+  transform: scale(1.1, 1.1);
+}

@@ -13,22 +13,49 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="container">
+    <section id="navigation">
+      <!-- Image and text -->
+      <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <img
+            src="logo.png"
+            width="30"
+            height="30"
+            class="d-inline-block align-top"
+            alt=""
+          />
+          Hungry Monster
+        </a>
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link active text-dark" href="#"><h5>Home</h5></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#"><h5>About</h5></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#"><h5>Recipes</h5></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#"><h5>Blog</h5></a>
+          </li>
+        </ul>
+      </nav>
+    </section>
     <section class="containerr">
       <div class="mt-5">
-        <div class="input-group mb-3">
+        <div class="input-group mb-3 mx-auto">
           <input
             type="text"
             id="input-text"
-            class="form-control"
+            class="form-control form-control-lg"
             placeholder="Input the first letter of your food. Result will show the list of all meals by that first letter "
-            aria-label="Recipient's username"
-            aria-describedby="basic-addon2"
           />
           <div class="input-group-append">
             <button
               id="button-click"
-              class="btn btn-outline-secondary"
+              class="btn btn-outline-warning btn-lg"
               type="button"
               onclick="clickResponse()"
             >
