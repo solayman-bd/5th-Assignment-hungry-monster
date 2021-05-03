@@ -1,4 +1,4 @@
-# Hungry-Monster (API callibg related)
+# Hungry-Monster (API calling related)
 
 features:
 1) By searching the name of any meal, meals list will be shown in the UI.
